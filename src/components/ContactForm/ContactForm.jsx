@@ -14,7 +14,7 @@ export const ContactForm = ({ onAdd }) => {
       .required("This is a required field"),
     number: Yup.string()
       .matches(
-        /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/,
+        /^[\+]?[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{2,3}[-\s\.]?[0-9]{2,6}$/,
         "Invalid phone number"
       )
       .required("This is a required field"),
